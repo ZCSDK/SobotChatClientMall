@@ -2,11 +2,11 @@ Pod::Spec.new do |s|
 
 
 s.name         = "SobotChatClientMall"
-s.version      = "4.0.4"
+s.version      = "4.0.4.1"
 s.summary      = "SobotSDK V6"
 
 s.description      = <<-DESC
-  It is marquee view used on iOS, which implement by Objective-C 404.
+  It is marquee view used on iOS, which implement by Objective-C 4041.
 DESC
 
 s.homepage         = "https://github.com/ZCSDK/SobotChatClientMall.git"
