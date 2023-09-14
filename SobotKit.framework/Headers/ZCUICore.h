@@ -131,7 +131,7 @@ typedef NS_ENUM(NSInteger,ZCInitStatus) {
 @property(nonatomic,strong) NSMutableArray * cids;
 @property(nonatomic,strong) NSMutableArray * _Nullable chatMessages;
 @property(nonatomic,weak) id<ZCUICoreDelegate> _Nullable delegate;
-
+@property(nonatomic,copy) void (^ZCClosePageBlock)(ZCPageStateType type);
 // 是否已经执行过转人工，再发送消息的时候使用，YES时，说明已经转过人工了，但是未说过话不做真正的转人工调用
 @property (nonatomic,assign) BOOL isAfterConnectUser;
 @property(nonatomic,strong) SobotChatMessage * _Nullable lineModel;
