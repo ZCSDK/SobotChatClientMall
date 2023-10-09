@@ -35,6 +35,13 @@ NS_ASSUME_NONNULL_BEGIN
 -(NSString *)getLoginAccessToken;
 -(NSString *)getServiceEmail;
 
+
+// 获取当前登录使用的语言，如果为空默认给zh
+-(NSString *)getCurLanguage;
+
+// 获取当前登录用户的时区，如果为空，默认当前系统[NSTimeZone systemTimeZone]
+-(NSTimeZone *)getCurTimeZone;
+
 /// 检查当前token是否有效
 -(BOOL )checkExpiresToken;
 

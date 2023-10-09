@@ -23,20 +23,22 @@ NSString *sobotBackToPassedTimeWithDaysNumber(NSInteger number);
 /**
  *  日期格式
  *
- *  @param fromate 格式
+ *  @param formate 格式
  *  @param date    要格式的日期
  *
  *  @return 格式化后的字符串
  */
-NSString * sobotDateTransformString(NSString* fromate,NSDate*date);
+NSString * sobotDateTransformString(NSString* formate,NSDate*date);
+NSString * sobotDateTransformStringZone(NSString* formate,NSDate*date,NSTimeZone *timeZone);
 
 /**
  *  longlong类型日期，转换为字符串
  *
- *  @param fromate  格式
+ *  @param formate  格式
  *  @param longdate 转换的类型，主要php和java日期精确度不一样
  */
-NSString * sobotLongdateTransformString(NSString* fromate,long long longdate);
+NSString * sobotLongdateTransformString(NSString* formate,long long longdate);
+NSString * sobotLongdateTransformStringZone(NSString* formate,long long longdate,NSTimeZone  *timeZone);
 
 // 时间戳转字符串
 NSString* sobotTimeWithYearMonthDayCountDown(NSString *timestamp);
