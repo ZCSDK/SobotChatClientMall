@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 NSString *sobotGetCurrentTimes(void);
 
 // 几天之后
-NSString *sobotBackToPassedTimeWithDaysNumber(NSInteger number);
+NSString *sobotBackToPassedTimeWithDaysNumber(NSInteger number,NSString *serverLocale,NSTimeZone *timeZone);
 
 /**
  *  日期格式
@@ -92,16 +92,16 @@ NSString *sobotGetMonthEndWith(NSString*data);
 NSString *sobotGetLastMonthBeginWith(NSString*data);
 
 // 获取上个月最后一天
-NSString *sobotGetLastMonthEndWith(NSString*data);
+NSString *sobotGetLastMonthEndWith(NSString*data,NSString *serverLocale);
 
 // 通过 秒数 转换成 时：分：秒
 NSString *sobotTimeFormattedShow(int totalSeconds);
 
 // 获取本周的第一天和最后一天 传1 第一天按星期日，传2 第一天按星期日计算
-NSArray *sobotGetCurrentWeekFistDayAndLastDay(NSUInteger firstWeekday);
+NSArray *sobotGetCurrentWeekFistDayAndLastDay(NSUInteger firstWeekday,NSTimeZone *timeZone);
 
 // 获取上周 第一天和最后一天 firstWeekday 传1 第一天按星期日，传2 第一天按星期日计算
-NSArray *sobotGetLastWeekFistDayAndLastDay(NSUInteger firstWeekday);
+NSArray *sobotGetLastWeekFistDayAndLastDay(NSUInteger firstWeekday, NSTimeZone*timeZone);
 @end
 
 NS_ASSUME_NONNULL_END

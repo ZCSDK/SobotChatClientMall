@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,strong) UIButton * rightBtn;
 
+@property (nonatomic,copy) NSString *serverLocale;
+
 @property(nonatomic,assign) id<SobotDatePickViewDelegate> delegate;
 // action:0，取消；1；搜索，2、筛选
 @property (nonatomic,strong) void(^onCommitListner)(NSString *resultText,NSInteger index);
@@ -54,6 +56,14 @@ NS_ASSUME_NONNULL_BEGIN
  *  @return 带有toolbar的datePicker
  */
 -(instancetype)initDatePickWithDate:(NSDate *)defaulDate datePickerMode:(UIDatePickerMode)datePickerMode isHaveNavControler:(BOOL)isHaveNavControler;
+
+
+/// 通过时间和语言创建一个DatePicker
+/// @param defaulDate defaulDate description
+/// @param datePickerMode datePickerMode description
+/// @param isHaveNavControler isHaveNavControler description
+/// @param serverLocale serverLocale description
+-(instancetype)initDatePickWithDate:(NSDate *)defaulDate datePickerMode:(UIDatePickerMode)datePickerMode isHaveNavControler:(BOOL)isHaveNavControler serverLocale:(NSString *)serverLocale;
 
 /**
  *   移除本控件
