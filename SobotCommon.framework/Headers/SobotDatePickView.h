@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,copy) NSString *serverLocale;
 
+@property (nonatomic,strong) NSTimeZone *timeZone;
+
 @property(nonatomic,assign) id<SobotDatePickViewDelegate> delegate;
 // action:0，取消；1；搜索，2、筛选
 @property (nonatomic,strong) void(^onCommitListner)(NSString *resultText,NSInteger index);
@@ -65,6 +67,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param serverLocale serverLocale description
 -(instancetype)initDatePickWithDate:(NSDate *)defaulDate datePickerMode:(UIDatePickerMode)datePickerMode isHaveNavControler:(BOOL)isHaveNavControler serverLocale:(NSString *)serverLocale;
 
+
+-(instancetype)initDatePickWithDate:(NSDate *)defaulDate datePickerMode:(UIDatePickerMode)datePickerMode isHaveNavControler:(BOOL)isHaveNavControler serverLocale:(NSString *)serverLocale timeZone:(NSTimeZone *)timeZone;
 /**
  *   移除本控件
  */

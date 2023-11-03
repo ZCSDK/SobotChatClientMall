@@ -18,7 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 NSString *sobotGetCurrentTimes(void);
 
 // 几天之后
-NSString *sobotBackToPassedTimeWithDaysNumber(NSInteger number,NSString *serverLocale,NSTimeZone *timeZone);
+NSString *sobotBackToPassedTimeWithDaysNumber(NSInteger number,NSString *serverLocale,NSTimeZone *timeZone,NSInteger time);
+
+NSString *sobotBackToPassedTimeWithDaysNumberNoTimeZone(NSInteger number);
 
 /**
  *  日期格式
@@ -38,6 +40,14 @@ NSString * sobotDateTransformStringZone(NSString* formate,NSDate*date,NSTimeZone
  *  @param longdate 转换的类型，主要php和java日期精确度不一样
  */
 NSString * sobotLongdateTransformString(NSString* formate,long long longdate);
+
+/**
+ *  longlong类型日期，转换为字符串
+ *
+ *  @param formate  格式
+ *  @param longdate 转换的类型，主要php和java日期精确度不一样
+ *  @param timeZone  时区
+ */
 NSString * sobotLongdateTransformStringZone(NSString* formate,long long longdate,NSTimeZone  *timeZone);
 
 // 时间戳转字符串
@@ -69,6 +79,15 @@ NSString *sobotIntervalSinceNow(NSString *theDate);
  /3600 小时
  **/
 int sobotIntervalDateSinceSimpleNow(NSString *theDate);
+
+// 带时区的处理规则
+int sobotIntervalDateSinceSimpleNowAndTimeZone(NSString *theDate,NSTimeZone *timeZone);
+
+NSString * sobotDateTransformStringWithNSTimeZone(NSString* formate,NSDate*date,NSTimeZone *timeZone,NSInteger time);
+
+NSDate * sobotStringFormateDateFormateStringWihtTimeZone(NSString * stringDate,NSString *formate, NSTimeZone*timeZone,NSInteger time);
+
+NSDate * sobotStringFormateDateWithTime(NSString * stringDate,NSInteger time);
 
 /**
  *  获取日期的年,返回哪一年
